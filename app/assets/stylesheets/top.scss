@@ -98,10 +98,13 @@ body {
 .container {
     position: relative;
     margin: 75px 300px 0px 300px;
-
     background-color: #f9f9f9;
     /*border-top: 1px solid #dfdfdf;*/
+}
 
+.flash {
+  color: black;
+  padding-top: 10px;
 }
 
 table {
