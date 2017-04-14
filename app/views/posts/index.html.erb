@@ -1,0 +1,19 @@
+
+
+
+<div class="container">
+   <div class="wrapper col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
+     <p id="notice"><%= notice %></p>
+
+      <% @posts.each do |post| %>
+       <div class="row">
+          <h4><strong><%= post.title %></strong></h4>
+          <h4><strong><%= post.content %></strong></h4>
+          <p><%= link_to 'New Post', new_post_path %></p>
+          <%= link_to 'Show', post_path(post.id) %>,
+          <%= link_to 'Edit', edit_post_path(post.id) %>,
+          <%= link_to 'Delete', post_path(post.id), method: :delete, data: { confirm: '本当に削除してよろしいですか？' } %>
+       </div>
+      <% end %>
+    </div>
+ </div>

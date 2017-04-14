@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="wrapper col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
+    <p id="notice"><%= notice %></p>
+    <h2>Post</h2>
+    <table>
+      <tr>
+        <td><strong>Title:<%= @post.title %></strong></td>
+      </tr>
+      <tr>
+        <td><strong>Comment:<%= @post.content %></strong></td>
+      </tr>
+      <tr>
+        <td><%= link_to 'Edit', edit_post_path %></td>
+      </tr>
+    </table>
+    <br>
+    <br>
+
+<%= link_to 'Back', posts_path %>

@@ -1,0 +1,22 @@
+
+
+<%= form_for(@post) do |f| %>
+  <% if @post.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= @post.errors.count %>件のエラーがあります。</h2>
+      <ul>
+      <% @post.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <%= f.text_field :title %>
+  <br>
+  <%= f.text_field :content %>
+  <br>
+  <%= f.submit 'Post' %>
+<% end %>
+
+<%= link_to "Index", posts_path %>
