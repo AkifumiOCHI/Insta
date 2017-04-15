@@ -1,0 +1,9 @@
+<h1>画像が投稿されました！</h1>
+
+<h5>User: <%= @post.user.name %></h5>
+<h5>title: <%= @post.title %></h5>
+<p>content: <%= @post.content %></p>
+
+<p>
+  <%= link_to '投稿された画像はこちら', posts_url %>
+</p>
