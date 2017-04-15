@@ -4,6 +4,7 @@ ja:
       blog: "ブログ"
       contact: "お問い合わせ"
       user: "ユーザー"
+      post: "画像"
     attributes:
       blog:
         title: "タイトル"
@@ -21,3 +22,6 @@ ja:
         password: "パスワード"
         password_confirmation: "確認用パスワード"
         remember_me: "ログインを記憶"
+      post:
+        title: "タイトル"
+        content: "投稿内容"
