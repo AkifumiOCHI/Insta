@@ -21,7 +21,7 @@ n = 2
 while n <= 101
   Post.create(
     title: "あああ",
-    content: "いいい"
+    content: "いいい",
     user_id: n
   )
   n = n + 1
