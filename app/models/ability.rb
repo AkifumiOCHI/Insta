@@ -6,8 +6,8 @@ class Ability
     #
     #   user ||= User.new # guest user (not logged in)
     if user && user.admin?
-        can :access, :rails_admin  # rails_adminにアクセスできるように
-        can :manage, :all　　　　　　# 管理者のみがなんでもできるようにする
+      can :access, :rails_admin   # grant access to rails_admin
+      can :manage, :all           # allow superadmins to do anything
     end
     #   else
     #     can :read, :all
