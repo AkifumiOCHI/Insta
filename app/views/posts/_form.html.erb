@@ -16,6 +16,7 @@
   <br>
   <%= f.text_field :content %>
   <br>
+  <%= image_tag @post.image.url if @post.image? %>
   <%= f.file_field :image %>
   <%= f.hidden_field :image_cache %>
   <br>
