@@ -13,12 +13,21 @@
              <td><h6><%= post.user.name %></h6></td>
           </tr>
         </table>
-          <h4><strong><%= post.title %></strong></h4>
-          <h4><strong><%= post.content %></strong></h4>
-          <% if post.image? %>
- 　　　　　　<span><%= image_tag(post.image) %></span>
+        <table>
+          <tr>
+            <td><h4><strong><%= post.title %></strong></h4></td>
+          </tr>
+          <tr>
+            <td><h4><strong><%= post.content %></strong></h4></td>
+          </tr>
+          <tr>
+            <td><% if post.image? %>
+ 　　　　　　<%= image_tag(post.image) %>
 　　　　　　<% end %>
-          <p><%= link_to 'New Post', new_post_path %></p>
+            </td>
+          </tr>
+        </table>
+          <p><%= link_to 'New Post', new_post_path %></p><br>
           <%= link_to 'Show', post_path(post.id) %>,
           <%= link_to 'Edit', edit_post_path(post.id) %>,
           <%= link_to 'Delete', post_path(post.id), method: :delete, data: { confirm: '本当に削除してよろしいですか？' } %>
