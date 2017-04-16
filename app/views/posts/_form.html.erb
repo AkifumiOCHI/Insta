@@ -16,6 +16,9 @@
   <br>
   <%= f.text_field :content %>
   <br>
+  <%= f.file_field :image %>
+  <%= f.hidden_field :image_cache %>
+  <br>
   <%= f.submit 'Post' %>
 <% end %>
 

@@ -7,9 +7,17 @@
 
       <% @posts.each do |post| %>
        <div class="row">
-          <h6><%= post.user.name %><h6>
+         <table>
+           <tr>
+             <td><%= profile_img(post.user) %>　</td>
+             <td><h6><%= post.user.name %></h6></td>
+          </tr>
+        </table>
           <h4><strong><%= post.title %></strong></h4>
           <h4><strong><%= post.content %></strong></h4>
+          <% if post.image? %>
+ 　　　　　　<span><%= image_tag(post.image) %></span>
+　　　　　　<% end %>
           <p><%= link_to 'New Post', new_post_path %></p>
           <%= link_to 'Show', post_path(post.id) %>,
           <%= link_to 'Edit', edit_post_path(post.id) %>,
