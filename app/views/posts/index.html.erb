@@ -4,7 +4,8 @@
 <div class="container">
    <div class="wrapper col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
      <p id="notice"><%= notice %></p>
-
+     <h2>Posts</h2>
+     <%= link_to 'New Post', new_post_path, class: 'btn btn-default btn-sm' %><br>
       <% @posts.each do |post| %>
        <div class="row">
          <table>
@@ -12,7 +13,7 @@
              <td><%= profile_img(post.user) %>　</td>
              <td><h6><%= post.user.name %></h6></td>
           </tr>
-        </table>
+         </table>
         <table>
           <tr>
             <td><h4><strong><%= post.title %></strong></h4></td>
@@ -21,13 +22,13 @@
             <td><h4><strong><%= post.content %></strong></h4></td>
           </tr>
           <tr>
-            <td><% if post.image? %>
- 　　　　　　<%= image_tag(post.image) %>
-　　　　　　<% end %>
+            <td>
+            <% if post.image? %>
+ 　　　　　　 <span><%= image_tag(post.image) %></span>
+　　　　　　  <% end %>
             </td>
           </tr>
         </table>
-          <p><%= link_to 'New Post', new_post_path %></p><br>
           <%= link_to 'Show', post_path(post.id) %>,
           <%= link_to 'Edit', edit_post_path(post.id) %>,
           <%= link_to 'Delete', post_path(post.id), method: :delete, data: { confirm: '本当に削除してよろしいですか？' } %>
