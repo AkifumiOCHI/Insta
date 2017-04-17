@@ -5,7 +5,7 @@
    <div class="wrapper col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
      <p id="notice"><%= notice %></p>
      <h2>Posts</h2>
-     <%= link_to 'New Post', new_post_path, class: 'btn btn-primary btn-sm' %>
+     <%= link_to '画像投稿画面', new_post_path, class: 'btn btn-primary btn-sm' %>
      <br>
      <br>
      <br>
@@ -34,9 +34,9 @@
         </table>
         <br>
         <br>
-          <%= link_to 'Show', post_path(post.id), class: 'btn btn-success btn-sm'%>
-          <%= link_to 'Edit', edit_post_path(post.id), class: 'btn btn-warning btn-sm'%>
-          <%= link_to 'Delete', post_path(post.id), class: 'btn btn-danger btn-sm', method: :delete, data: { confirm: '本当に削除してよろしいですか？' } %>
+          <%= link_to '投稿画像の詳細', post_path(post.id), class: 'btn btn-success btn-sm'%>
+          <%= link_to '投稿画像の編集', edit_post_path(post.id), class: 'btn btn-warning btn-sm'%>
+          <%= link_to '投稿画像の削除', post_path(post.id), class: 'btn btn-danger btn-sm', method: :delete, data: { confirm: '本当に削除してよろしいですか？' } %>
        </div>
       <% end %>
     </div>
