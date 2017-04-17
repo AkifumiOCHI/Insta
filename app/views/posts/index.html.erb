@@ -5,22 +5,19 @@
    <div class="wrapper col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
      <p id="notice"><%= notice %></p>
      <h2>Posts</h2>
-     <%= link_to 'New Post', new_post_path, class: 'btn btn-default btn-sm' %><br>
+     <%= link_to 'New Post', new_post_path, class: 'btn btn-primary btn-sm' %>
+     <br>
+     <br>
+     <br>
       <% @posts.each do |post| %>
        <div class="row">
          <table>
            <tr>
              <td><%= profile_img(post.user) %>　</td>
-             <td><h6><%= post.user.name %></h6></td>
+             <td><h5><%= post.user.name %></h5></td>
           </tr>
          </table>
         <table>
-          <tr>
-            <td><h4><strong><%= post.title %></strong></h4></td>
-          </tr>
-          <tr>
-            <td><h4><strong><%= post.content %></strong></h4></td>
-          </tr>
           <tr>
             <td>
             <% if post.image? %>
@@ -28,10 +25,18 @@
 　　　　　　  <% end %>
             </td>
           </tr>
+          <tr>
+            <td><h6><%= post.title %></h6></td>
+          </tr>
+          <tr>
+            <td><h6><%= post.content %></h6></td>
+          </tr>
         </table>
-          <%= link_to 'Show', post_path(post.id) %>,
-          <%= link_to 'Edit', edit_post_path(post.id) %>,
-          <%= link_to 'Delete', post_path(post.id), method: :delete, data: { confirm: '本当に削除してよろしいですか？' } %>
+        <br>
+        <br>
+          <%= link_to 'Show', post_path(post.id), class: 'btn btn-success btn-sm'%>
+          <%= link_to 'Edit', edit_post_path(post.id), class: 'btn btn-warning btn-sm'%>
+          <%= link_to 'Delete', post_path(post.id), class: 'btn btn-danger btn-sm', method: :delete, data: { confirm: '本当に削除してよろしいですか？' } %>
        </div>
       <% end %>
     </div>

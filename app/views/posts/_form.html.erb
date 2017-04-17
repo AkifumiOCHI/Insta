@@ -11,9 +11,10 @@
       </ul>
     </div>
   <% end %>
-
+  <%= f.label :title %>
   <%= f.text_field :title %>
   <br>
+  <%= f.label :content %>
   <%= f.text_field :content %>
   <br>
   <%= image_tag @post.image.url if @post.image? %>
@@ -23,4 +24,4 @@
   <%= f.submit 'Post' %>
 <% end %>
 
-<%= link_to "Index", posts_path %>
+<%= link_to "Index", posts_path, class: 'btn btn-info btn-sm' %>
